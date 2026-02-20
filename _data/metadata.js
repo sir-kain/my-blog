@@ -1,8 +1,8 @@
 export default {
 	title: "Waly",
 	url: "https://example.com/",
-	language: "en",
-	description: "I am writing about my experiences as a passionate on the web.",
+	language: "fr",
+	description: "Je partage mes expériences de développeur web passionné.",
 	author: {
 		name: "Waly",
 		email: "ahmadouwalyndiaye@gmail.com",

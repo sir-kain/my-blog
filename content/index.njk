@@ -1,6 +1,6 @@
 ---js
 const eleventyNavigation = {
-	key: "Home",
+	key: "Accueil",
 	order: 1
 };
 
@@ -9,18 +9,18 @@ const numberOfLatestPostsToShow = 3;
 
 <div class="intro">
 	<p>
-		Hello, I'm Ahmadou Waly Ndiaye from Senegal and I love the Web!
+		Bonjour, je suis Ahmadou Waly Ndiaye, développeur web au Sénégal.
 	</p>
 	<p>
-		You can find me on:
-		<a href="#">LinkedIn</a>
-		<a href="#">Github</a>
-		<a href="#">Twitter</a>
+		Retrouvez-moi sur :
+		<a href="https://www.linkedin.com/in/ndiaye-ahmadou-waly-a61056ba/">LinkedIn</a>
+		<a href="https://github.com/sir-kain">Github</a>
+		<a href="https://twitter.com/_sir_kane">Twitter</a>
 	</p>
 </div>
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h1>Latest {{ latestPostsCount }} Post{% if latestPostsCount != 1 %}s{% endif %}</h1>
+<h1>{{ latestPostsCount }} dernier{% if latestPostsCount != 1 %}s{% endif %} article{% if latestPostsCount != 1 %}s{% endif %}</h1>
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
@@ -28,14 +28,5 @@ const numberOfLatestPostsToShow = 3;
 
 {% set morePosts = postsCount - numberOfLatestPostsToShow %}
 {% if morePosts > 0 %}
-<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="blog.njk">the archive</a>.</p>
+<p>{{ morePosts }} autre{% if morePosts != 1 %}s{% endif %} article{% if morePosts != 1 %}s{% endif %} disponible{% if morePosts != 1 %}s{% endif %} dans <a href="blog.njk">les archives</a>.</p>
 {% endif %}
-
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
-</ul>
-#}
