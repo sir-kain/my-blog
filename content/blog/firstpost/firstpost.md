@@ -6,7 +6,8 @@ tags: Web, AI, Talk
 ---
 
 Diapo: [Power point](https://docs.google.com/presentation/d/1AOr12gD7B9Y_7yTUVKyG6FTmrHMPdacD/edit?usp=sharing&ouid=104352643540620210482&rtpof=true&sd=true)
-Live demo: [chrome-ia.netlify.app](https://chrome-ia.netlify.app/
+
+Live demo: [chrome-ia.netlify.app](https://chrome-ia.netlify.app/)
 
 Au Hacktoberfest 2025 organisé par [Galsen Dev](https://galsen.dev/), j'ai eu l'occasion de présenter quelque chose qui m'avait pas mal excité lors de ma veille technologique : les **APIs IA intégrées nativement dans Chrome**.
 
