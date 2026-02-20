@@ -1,8 +1,9 @@
 ---
-title: De l'expérimentation à l'architecture - La genèse de vscode-mediaplayer
+title: Comment j'ai crée l'extension vscode vscode-mediaplayer
 description: Retour technique sur la création d'une extension VS Code capable de lire des médias, du prototype monolithique à une architecture modulaire inspirée par Peacock.
 date: 2025-11-22
-tags: vscode, extension, typescript, architecture, open-source
+tags: Ide
+draft: true
 ---
 
 En cette fin 2025, je prends enfin le temps de partager mon experience sur la création de mon extension VS Code, publiée en 2019. À l’époque, juste apres la premiere release, j’avais reçu un avis qui m’a marqué : celui d’un certain **Spencer Williams**.
