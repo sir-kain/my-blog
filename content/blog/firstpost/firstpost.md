@@ -2,10 +2,15 @@
 title: "Talk: Chrome built-in AI APIs"
 description: Retour sur ma présentation au Hacktoberfest 2025 organisé par Galsen Dev, où j'ai parlé des APIs IA intégrées nativement dans Chrome.
 date: 2025-10-25
-tags: Web, AI, Talk
+tags: Web Standard & Performance, AI, Talk
 ---
 
 <iframe src="https://docs.google.com/presentation/d/1AOr12gD7B9Y_7yTUVKyG6FTmrHMPdacD/embed?start=false&loop=false" width="100%" height="420" style="border:none;border-radius:8px;" allowfullscreen></iframe>
+
+| | |
+|:---|:---|
+| **Date** | 25 octobre 2025 |
+| **Lieu** | FST de l'UCAD, Dakar — [Hacktoberfest Galsen Dev](https://galsen.dev/) |
 
 Demo : [chrome-ia.netlify.app](https://chrome-ia.netlify.app/)
 

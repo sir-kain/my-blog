@@ -10,7 +10,13 @@ Blog personnel d'**Ahmadou Waly NDIAYE** (alias Sir Kane), développeur web.
 
 **Deux types de contenus** :
 - **Articles techniques** : retour d'expérience sur la création d'un projet (ex: vscode-mediaplayer). Ton direct, première personne, narratif — on raconte comment ça s'est construit, pas juste ce que ça fait.
-- **Comptes rendus de talks** : résumé d'une présentation donnée en communauté. On sent l'événement (date, lieu, public), les slides sont embarquées en iframe, et une section "Pour aller plus loin" regroupe les ressources.
+- **Comptes rendus de talks** : résumé d'une présentation donnée en communauté. Les slides sont embarquées en iframe en haut, suivies d'un tableau Date/Lieu, puis le contenu du talk, et une section "Pour aller plus loin" en bas. Structure après l'iframe :
+  ```markdown
+  | | |
+  |:---|:---|
+  | **Date** | JJ mois AAAA |
+  | **Lieu** | Nom du lieu — [Événement](url) |
+  ```
 
 **Ton général** : personnel, direct, sans jargon inutile. Pas d'article encyclopédique — on partage une expérience vécue.
 
