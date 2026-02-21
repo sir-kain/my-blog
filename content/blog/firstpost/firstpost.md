@@ -1,57 +1,29 @@
 ---
-title: "Les APIs IA intégrées dans Chrome : l'IA qui tourne sans internet"
-description: Gemini Nano est désormais embarqué directement dans Chrome. Fini les appels serveurs, l'IA tourne en local, même hors ligne. Voici ce que ça change pour nous développeurs.
-date: 2025-11-01
+title: "Talk: Chrome built-in AI APIs"
+description: Retour sur ma présentation au Hacktoberfest 2025 organisé par Galsen Dev, où j'ai parlé des APIs IA intégrées nativement dans Chrome.
+date: 2025-10-25
 tags: Web, AI, Talk
 ---
 
-Diapo: [Power point](https://docs.google.com/presentation/d/1AOr12gD7B9Y_7yTUVKyG6FTmrHMPdacD/edit?usp=sharing&ouid=104352643540620210482&rtpof=true&sd=true)
+<iframe src="https://docs.google.com/presentation/d/1AOr12gD7B9Y_7yTUVKyG6FTmrHMPdacD/embed?start=false&loop=false" width="100%" height="420" style="border:none;border-radius:8px;" allowfullscreen></iframe>
 
-Live demo: [chrome-ia.netlify.app](https://chrome-ia.netlify.app/)
+Demo : [chrome-ia.netlify.app](https://chrome-ia.netlify.app/)
 
-Au Hacktoberfest 2025 organisé par [Galsen Dev](https://galsen.dev/), j'ai eu l'occasion de présenter quelque chose qui m'avait pas mal excité lors de ma veille technologique : les **APIs IA intégrées nativement dans Chrome**.
+---
 
-Ce n'est pas encore un standard. C'est en preview. Mais c'est une direction qui change vraiment la façon dont on peut intégrer de l'IA dans nos applications web.
+Le 25 octobre 2025, [Galsen Dev](https://galsen.dev/) organisait son Hacktoberfest à la FST de l'UCAD. J'ai eu un slot pour présenter quelque chose que je suivais depuis un moment dans ma veille : les **APIs IA intégrées directement dans Chrome**.
 
-## Le contexte : comment on fait de l'IA aujourd'hui
+Le sujet a bien résonné dans la salle, alors j'en fais un résumé ici.
 
-Jusqu'ici, pour utiliser de l'IA dans une app web, le flow est toujours le même :
+## L'idée centrale
 
-1. L'utilisateur envoie une requête depuis son navigateur
-2. Ça part sur **un serveur** qui héberge ou appelle un modèle IA
-3. Le serveur renvoie la réponse
+Aujourd'hui, intégrer de l'IA dans une app web passe forcément par un serveur : on envoie la requête, le modèle tourne quelque part dans le cloud, la réponse revient. Ça marche, mais ça implique de la latence, des coûts, une connexion internet — et les données de l'utilisateur quittent son appareil.
 
-Ce modèle fonctionne, mais il a des limites évidentes : latence, coût d'infrastructure, besoin de connexion internet, et surtout — les données de l'utilisateur quittent son appareil.
+Ce que Google est en train d'expérimenter, c'est de faire tourner **Gemini Nano** directement dans Chrome. Pas dans le cloud. Dans le navigateur, sur la machine de l'utilisateur. Avec trois bénéfices immédiats : **privé, offline, performant**.
 
-## La nouveauté : Gemini Nano directement dans Chrome
+## Ce que j'ai montré
 
-Google a intégré **Gemini Nano**, un LLM compact, directement dans Chrome. Le modèle tourne **côté client**, dans le navigateur, sans passer par un serveur externe et sans nécessiter de connexion internet.
-
-Concrètement, ça veut dire que depuis du JavaScript, on peut appeler des fonctionnalités IA directement, comme on appelle n'importe quelle API web.
-
-Les avantages sont immédiats :
-
-- **Privé** — les données ne quittent jamais le navigateur de l'utilisateur
-- **Offline** — ça fonctionne sans connexion internet
-- **Performant** — accélération matérielle, réponses en temps réel
-
-## Les APIs disponibles
-
-Chrome expose plusieurs APIs spécialisées :
-
-| API | Utilité |
-|-----|---------|
-| **Prompt API** | Interagir avec le modèle en langage naturel (texte ou image) |
-| **Translator API** | Traduire du texte entre langues |
-| **Summarizer API** | Générer des résumés de textes |
-| **Writer API** | Rédiger du contenu |
-| **Rewriter API** | Reformuler du texte existant |
-| **Proofreader API** | Corriger et améliorer un texte |
-| **Language Detector API** | Détecter la langue d'un texte |
-
-## Dans le code, ça ressemble à quoi ?
-
-### Prompt API — poser une question au modèle
+La partie qui a le plus intrigué la salle, c'est la simplicité du code. Appeler un LLM depuis le navigateur, ça ressemble à ça :
 
 ```javascript
 const session = await LanguageModel.create({
@@ -59,74 +31,22 @@ const session = await LanguageModel.create({
   expectedOutputs: [{ type: "text", languages: ["en"] }]
 });
 
-const response = await session.prompt(
-  "Explain quantum computing like I'm five."
-);
-// "Imagine you have a special box that can be both a coin and a
-// door at the same time, like magic! That's kind of like a
-// quantum bit. [...]"
+const response = await session.prompt("Explain quantum computing like I'm five.");
 ```
 
-La Prompt API supporte aussi les **images** :
+Pas de clé API. Pas de requête HTTP. Le modèle répond directement.
 
-```javascript
-const session = await LanguageModel.create({
-  expectedInputs: [{ type: "image" }, { type: "text" }],
-});
+Il y a aussi une **Translator API**, une **Summarizer API**, un **Language Detector**... Autant de fonctionnalités exposées nativement, sans dépendance externe.
 
-const result = await session.prompt([
-  {
-    role: "user",
-    content: [
-      { type: "text", value: input.value },
-      { type: "image", value: document.querySelector("img") },
-    ],
-  },
-]);
-```
+Ce qui m'a convaincu que c'est une direction sérieuse : **Bluesky l'utilise déjà** pour traduire les posts. Thomas Steiner (@tomayac) en a parlé [ici](https://bsky.app/profile/tomayac.com/post/3lzlaf5kpq22x).
 
-### Translator API — traduire sans API externe
+## Ce qu'il faut retenir
 
-```javascript
-const translator = await Translator.create({
-  sourceLanguage: "en",
-  targetLanguage: "fr",
-});
+C'est encore en **early preview**, pas standardisé, pas activé par défaut. Donc pas question de l'utiliser en prod sans fallback. Mais c'est une direction qui mérite d'être suivie de près, surtout pour ceux qui construisent des apps où la confidentialité et le mode offline comptent.
 
-await translator.translate("the text in english");
-```
+## Pour aller plus loin
 
-### Summarizer API — résumer un texte long
-
-```javascript
-const summarizer = await Summarizer.create();
-await summarizer.summarize("Text to summarize...");
-```
-
-## Un cas concret : Bluesky l'utilise déjà
-
-Ce qui m'a convaincu que cette direction est sérieuse, c'est de voir que **Bluesky utilise la Translation API** pour traduire les posts directement dans l'app. Thomas Steiner (@tomayac) en a parlé sur [son post Bluesky](https://bsky.app/profile/tomayac.com/post/3lzlaf5kpq22x).
-
-C'est du monde réel, pas juste un proof of concept.
-
-## Ma démo
-
-Pour le Hacktoberfest, j'ai construit une petite démo qui explore ces différentes APIs :
-
-- **Repo GitHub** : [github.com/sir-kain/chrome-ia](https://github.com/sir-kain/chrome-ia)
-- **Demo live** : [chrome-ia.netlify.app](https://chrome-ia.netlify.app/)
-
-Attention : pour que ça fonctionne, il faut être sur **Chrome** et avoir rejoint le programme early preview (voir ci-dessous), car les APIs ne sont pas encore activées par défaut.
-
-## Comment tester dès maintenant
-
-Google a ouvert un programme early preview pour que les développeurs puissent accéder aux APIs dès qu'elles atterrissent dans Chrome :
-
-- Rejoindre le programme : [goo.gle/chrome-ai-dev-preview-join](https://goo.gle/chrome-ai-dev-preview-join)
-- Pour les curieux, Google avait aussi lancé le **Built-in AI Challenge 2025** avec 70 000$ à la clé : [goo.gle/ChromeAIChallenge2025](https://goo.gle/ChromeAIChallenge2025)
-
----
-
-Ce qui me plaît dans cette approche, c'est qu'elle démocratise l'accès à l'IA. Plus besoin de gérer une infrastructure serveur, de payer des tokens ou d'avoir une connexion stable. Le modèle est là, dans le navigateur, disponible pour tout le monde.
-
-C'est encore en preview et pas standardisé — donc pas à mettre en prod sans plan de fallback — mais c'est clairement une brique sur laquelle il vaut le coup de garder un oeil.
+- Les slides : [ouvrir en plein écran](https://docs.google.com/presentation/d/1AOr12gD7B9Y_7yTUVKyG6FTmrHMPdacD/present)
+- Ma démo interactive : [chrome-ia.netlify.app](https://chrome-ia.netlify.app/) *(Chrome requis + early preview)*
+- Le code source : [github.com/sir-kain/chrome-ia](https://github.com/sir-kain/chrome-ia)
+- Rejoindre le programme early preview : [goo.gle/chrome-ai-dev-preview-join](https://goo.gle/chrome-ai-dev-preview-join)
