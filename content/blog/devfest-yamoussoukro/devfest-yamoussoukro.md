@@ -2,7 +2,7 @@
 title: "Talk: L'outillage JavaScript au DevFest Yamoussoukro"
 description: Retour sur ma présentation au DevFest Yamoussoukro 2025 — même sujet que Dakar, mais une autre expérience, un autre public, et un déplacement qui valait vraiment le coup.
 date: 2025-12-13
-tags: Web Standard & Performance, JavaScript, Talk
+tags: Web Standard & Performance, Talk
 ---
 
 <iframe src="https://docs.google.com/presentation/d/1pxSYyPwBO1oXnx7nU0klt_atwqYBsA3SgAU1M7DkJ2g/embed?start=false&loop=false" width="100%" height="420" style="border:none;border-radius:8px;" allowfullscreen></iframe>
@@ -10,7 +10,7 @@ tags: Web Standard & Performance, JavaScript, Talk
 | | |
 |:---|:---|
 | **Date** | 13 décembre 2025 |
-| **Lieu** | Stade Charles Konan Banny, Yamoussoukro — [DevFest Yamoussoukro 2025](https://gdg.community.dev/) |
+| **Lieu** | Stade Charles Konan Banny, Yamoussoukro — <img src="/img/devfest.png" alt="DevFest" width="32" eleventy:ignore> [DevFest Yamoussoukro 2025](https://gdg.community.dev/) |
 
 ---
 

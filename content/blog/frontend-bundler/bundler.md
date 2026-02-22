@@ -10,7 +10,7 @@ tags: Web Standard & Performance, Talk
 | | |
 |:---|:---|
 | **Date** | 13 janvier 2025 |
-| **Lieu** | Hôtel Sea Plaza, Dakar — [DevFest Dakar](https://gdg.community.dev/gdg-dakar/) |
+| **Lieu** | Hôtel Sea Plaza, Dakar — <img src="/img/devfest.png" alt="DevFest" width="32" eleventy:ignore> [DevFest Dakar](https://gdg.community.dev/gdg-dakar/) |
 
 ---
 

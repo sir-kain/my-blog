@@ -11,7 +11,7 @@ tags: Web Standard & Performance, Talk
 | | |
 |:---|:---|
 | **Date** | 5 décembre 2025 |
-| **Lieu** | [TheCodingMachine](https://www.thecodingmachine.com/) · en ligne |
+| **Lieu** | <img src="/img/tcm.svg" alt="TheCodingMachine" width="32" height="32" style="width:64px" eleventy:ignore> [TheCodingMachine](https://www.thecodingmachine.com/) · en ligne |
 | **Demo** | [sir-kain.github.io/lazy-loading](https://sir-kain.github.io/lazy-loading/) |
 
 ---

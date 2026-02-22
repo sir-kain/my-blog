@@ -14,9 +14,11 @@ Blog personnel d'**Ahmadou Waly NDIAYE** (alias Sir Kane), développeur web.
   ```markdown
   | | |
   |:---|:---|
+  | | <img src="/img/logo.png" alt="Événement" height="32" eleventy:ignore> |
   | **Date** | JJ mois AAAA |
   | **Lieu** | Nom du lieu — [Événement](url) |
   ```
+  Logos disponibles dans `public/img/` : `devfest.png`, `tcm.svg`, `woloftech.png`.
 
 **Ton général** : personnel, direct, sans jargon inutile. Pas d'article encyclopédique — on partage une expérience vécue.
 
