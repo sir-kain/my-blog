@@ -113,6 +113,7 @@ Deux choses à observer :
 - La démo : [sir-kain.github.io/lazy-loading](https://sir-kain.github.io/lazy-loading/)
 - Le code source : [github.com/sir-kain/lazy-loading](https://github.com/sir-kain/lazy-loading)
 - [`loading` sur MDN](https://developer.mozilla.org/fr/docs/Web/HTML/Element/img#loading)
+- Post LinkedIn de [TheCodingMachine](https://www.linkedin.com/posts/the-coding-machine_gestion-asynchrone-activity-7416769753073041408-V57W?utm_source=share&utm_medium=member_desktop&rcm=ACoAABlHo2kBLy8KE-CT5FHx-VPzPxL6RDQ_SQI)
 - [`<picture>` sur MDN](https://developer.mozilla.org/fr/docs/Web/HTML/Element/picture)
 - [Intersection Observer API sur MDN](https://developer.mozilla.org/fr/docs/Web/API/Intersection_Observer_API)
 - [Métriques Lighthouse (FCP, LCP, CLS...)](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint?hl=fr)
