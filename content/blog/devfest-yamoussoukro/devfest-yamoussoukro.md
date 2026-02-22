@@ -39,7 +39,7 @@ document.querySelector('button').addEventListener("click", async () => {
 });
 ```
 
-Le détail complet de chaque concept est dans le [compte rendu du DevFest Dakar](/blog/frontend-bundler/).
+Le détail complet de chaque concept est dans le [compte rendu du DevFest Dakar](/blog/frontend-bundler/bundler/).
 
 ## Pour aller plus loin
 
