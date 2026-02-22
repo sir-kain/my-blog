@@ -5,12 +5,14 @@ date: 2025-12-05
 tags: Web Standard & Performance, Talk
 ---
 
+
 <iframe src="https://docs.google.com/presentation/d/1DmlfeT2aYsk5nQvcg_5m5r7Q0wvfdaQeyFzAewwuzNs/embed?start=false&loop=false" width="100%" height="420" style="border:none;border-radius:8px;" allowfullscreen></iframe>
 
 | | |
 |:---|:---|
 | **Date** | 5 décembre 2025 |
 | **Lieu** | [TheCodingMachine](https://www.thecodingmachine.com/) · en ligne |
+| **Demo** | [sir-kain.github.io/lazy-loading](https://sir-kain.github.io/lazy-loading/) |
 
 ---
 
@@ -96,9 +98,19 @@ document.querySelectorAll('.ma-class').forEach(el => {
 
 C'est cette API qui est derrière la plupart des implémentations modernes de lazy loading — y compris dans des frameworks comme Vue, React ou Angular.
 
+## La démo
+
+Pour illustrer tout ça, j'ai fait une petite page de démo : [sir-kain.github.io/lazy-loading](https://sir-kain.github.io/lazy-loading/)
+
+Deux choses à observer :
+
+- **Images adaptatives** : l'image mobile ne charge que sur mobile, l'image desktop seulement sur desktop — grâce à `<picture>` et ses `<source>` avec media queries.
+- **IntersectionObserver en action** : chaque section affiche un message dans la console (`Partie 1 affichée`, `Partie 2 affichée`...) uniquement quand elle devient visible dans le viewport. Ouvre les DevTools et fais défiler — tu verras les logs apparaître au bon moment.
+
 ## Pour aller plus loin
 
 - Les slides : [ouvrir en plein écran](https://docs.google.com/presentation/d/1DmlfeT2aYsk5nQvcg_5m5r7Q0wvfdaQeyFzAewwuzNs/present)
+- La démo : [sir-kain.github.io/lazy-loading](https://sir-kain.github.io/lazy-loading/)
 - Le code source : [github.com/sir-kain/lazy-loading](https://github.com/sir-kain/lazy-loading)
 - [`loading` sur MDN](https://developer.mozilla.org/fr/docs/Web/HTML/Element/img#loading)
 - [`<picture>` sur MDN](https://developer.mozilla.org/fr/docs/Web/HTML/Element/picture)
