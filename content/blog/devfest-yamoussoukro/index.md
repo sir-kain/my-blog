@@ -14,7 +14,7 @@ tags: Web Standard & Performance, Talk
 
 ---
 
-J'avais déjà présenté ce talk sur l'outillage JavaScript au [DevFest Dakar](/blog/frontend-bundler/) en janvier. Quand l'opportunité s'est présentée de le faire à Yamoussoukro, j'ai pas hésité.
+J'avais déjà présenté ce talk sur l'outillage JavaScript au [DevFest Dakar](/blog/devfest-dakar/) en janvier. Quand l'opportunité s'est présentée de le faire à Yamoussoukro, j'ai pas hésité.
 
 Faire le déplacement jusqu'en Côte d'Ivoire, c'était l'occasion de rencontrer des communautés de développeurs qu'on ne croise pas habituellement. On parle souvent de la scène tech en Afrique de l'Ouest comme d'un tout, mais chaque ville a sa dynamique propre, ses centres d'intérêt, ses questions. Les échanges qu'on a eus surtout autour du développement Front m'ont autant apporté que le talk lui-même.
 
@@ -39,7 +39,7 @@ document.querySelector('button').addEventListener("click", async () => {
 });
 ```
 
-Le détail complet de chaque concept est dans le [compte rendu du DevFest Dakar](/blog/frontend-bundler/bundler/).
+Le détail complet de chaque concept est dans le [compte rendu du DevFest Dakar](/blog/devfest-dakar/).
 
 ## Pour aller plus loin
 

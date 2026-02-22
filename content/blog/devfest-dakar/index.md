@@ -14,6 +14,8 @@ tags: Web Standard & Performance, Talk
 
 ---
 
+![Présentation de l'outillage JavaScript au DevFest Dakar 2025](./devfest-dakar.jpeg)
+
 Quand on parle d'outillage JavaScript, on parle souvent de Webpack, Vite, Rollup... sans vraiment savoir ce qu'ils font sous le capot. Au DevFest Dakar, j'ai pris le parti de décortiquer les 4 mécanismes fondamentaux derrière ces outils.
 
 ## Minification
