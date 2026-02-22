@@ -5,7 +5,7 @@ date: 2024-08-18
 tags: Web Standard & Performance
 ---
 
-<video src="./promise-strategies.mp4" controls width="100%" style="border-radius:8px;"></video>
+<video src="./promise-strategies.mp4" width="100%" style="border-radius:8px;" autoplay loop muted playsinline></video>
 
 Dès qu'on a plusieurs tâches asynchrones à gérer en parallèle, la question se pose : comment les orchestrer ? C'est là qu'interviennent les **combinateurs de promesses**. JavaScript en fournit quatre nativement, et chacun a un comportement bien précis.
 
