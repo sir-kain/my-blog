@@ -2,7 +2,7 @@
 title: "Cloud Resource Manager : provisionner de l'AWS depuis une interface web"
 description: Retour sur un projet d'examen — une app Laravel/Filament qui crée des ressources AWS (EC2, S3, RDS) en déclenchant un pipeline GitLab CI/CD avec Terraform.
 date: 2026-04-25
-tags: Cloud, Laravel, DevOps
+tags: DevOps
 ---
 
 Dans le cadre d'un examen de Cloud Computing, j'avais une semaine pour livrer un projet qui touche à AWS. L'énoncé était assez libre — l'essentiel était de démontrer qu'on sait provisionner des ressources cloud. J'aurais pu faire un script shell ou un simple README avec des captures. J'ai préféré construire une vraie interface.
