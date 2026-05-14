@@ -20,11 +20,15 @@ Le 25 octobre 2025, [Galsen Dev](https://galsen.dev/) organisait son Hacktoberfe
 
 Le sujet a bien résonné dans la salle, alors j'en fais un résumé ici.
 
+> **Prérequis indispensable** : avant tout, il faut rejoindre le [Early Preview Program (EPP)](https://developer.chrome.com/docs/ai/join-epp). Sans ça, les APIs ne sont tout simplement pas disponibles dans le navigateur.
+
 ## L'idée centrale
 
 Aujourd'hui, intégrer de l'IA dans une app web passe forcément par un serveur : on envoie la requête, le modèle tourne quelque part dans le cloud, la réponse revient. Ça marche, mais ça implique de la latence, des coûts, une connexion internet — et les données de l'utilisateur quittent son appareil.
 
 Ce que Google est en train d'expérimenter, c'est de faire tourner **Gemini Nano** directement dans Chrome. Pas dans le cloud. Dans le navigateur, sur la machine de l'utilisateur. Avec trois bénéfices immédiats : **privé, offline, performant**.
+
+La taille exacte du modèle peut varier au fil des mises à jour de Chrome — actuellement environ **4 Go**. Pour voir la version installée sur votre machine, rendez-vous sur **`chrome://on-device-internals`**.
 
 ## Ce que j'ai montré
 
@@ -47,7 +51,9 @@ Ce qui m'a convaincu que c'est une direction sérieuse : **Bluesky l'utilise dé
 
 ## Ce qu'il faut retenir
 
-C'est encore en **early preview**, pas standardisé, pas activé par défaut. Donc pas question de l'utiliser en prod sans fallback. Mais c'est une direction qui mérite d'être suivie de près, surtout pour ceux qui construisent des apps où la confidentialité et le mode offline comptent.
+C'est encore en **early preview**, pas activé par défaut. Donc pas question de l'utiliser en prod sans fallback. Mais c'est une direction qui mérite d'être suivie de près, surtout pour ceux qui construisent des apps où la confidentialité et le mode offline comptent.
+
+Sur la standardisation : Google a déjà proposé ces APIs à la communauté web et les a soumises au **[W3C](https://www.w3.org/standards/about/)** et au **[Web Incubator Community Group (WICG)](https://wicg.io/)** pour discussion. L'objectif à terme est qu'elles fonctionnent dans tous les navigateurs, pas seulement Chrome.
 
 ## Pour aller plus loin
 
@@ -55,3 +61,4 @@ C'est encore en **early preview**, pas standardisé, pas activé par défaut. Do
 - Ma démo interactive : [chrome-ia.netlify.app](https://chrome-ia.netlify.app/) *(Chrome requis + early preview)*
 - Le code source : [github.com/sir-kain/chrome-ia](https://github.com/sir-kain/chrome-ia)
 - Rejoindre le programme early preview : [goo.gle/chrome-ai-dev-preview-join](https://goo.gle/chrome-ai-dev-preview-join)
+- Plus de démos officielles à explorer : [chrome.dev/web-ai-demos](https://chrome.dev/web-ai-demos/)
